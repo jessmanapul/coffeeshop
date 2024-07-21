@@ -1,23 +1,171 @@
+<!-- Group Members: Jessica Manapul, Alina Kaneeva & Brian Watson-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Meta Descriptions -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Boostrap, FontAwesome, & Custom Stylesheet -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"/>
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/brands.css"/>
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/solid.css"/>
     <link rel="stylesheet" href="css/styles.scss"/>
 
-    <title>Coffee Shop</title>
+     <!-- Page Title -->
+    <title>Code & Coffee</title>
 </head>
 
 <body>
 
-    <!-- Bootstrap JavaScript plugins -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-</body>
+    <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-sm navbar-dark sticky-top p-2">
+        <div class="container-fluid">
+            <!-- "Logo" -->
+            <span class="navbar-brand">Code & Coffee</span>
+             <!-- Nav Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nucampNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <!-- Nav Links -->
+        <div class="collapse navbar-collapse" id="nucampNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+            <!-- Nav Button -->
+            <a role="button" class="btn button-primary btn-md text-nowrap" data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve A Table</a>
+            </div>   
+         </div>
+     </nav>
 
+     <!-- Hero Section -->
+     <div id="hero" class="d-flex align-items-center">
+        <div class="container">
+          <h1 class="display-4">Welcome to Code & Coffee</h1>
+          <h2>Crafting the perfect cup of coffee so you can code, collaborate, and create. </p>
+        </div>
+      </div>
+
+     <!-- Main Section -->
+    <main class="container">
+
+        <!-- Menu Section -->
+        <section class="row">
+
+            <!-- Menu Item #1 -->
+            <div class="col-sm col-md-4 mb-5">
+                <div class="card">
+                    <img class="card-img-top" src="img/coffee_1.jpeg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Menu Item</h5>
+                        <p class="card-text">Description</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item #2 -->
+            <div class="col-sm col-md-4 mb-5">
+                <div class="card">
+                    <img class="card-img-top" src="img/coffee_1.jpeg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Menu Item</h5>
+                        <p class="card-text">Description</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item #3 -->
+            <div class="col-sm col-md-4 mb-5">
+                <div class="card">
+                    <img class="card-img-top" src="img/coffee_1.jpeg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Menu Item</h5>
+                        <p class="card-text">Description</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    	
+        <!-- Reserve Modal -->
+        <div class="modal fade" id="reserveModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Reserve a Table</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form id="reserveForm">
+                            <div class="row mb-3">
+                                <label for="headcount" class="col-xs-12 col-sm col-form-label">Number of People</label>
+                                <div class="col-xs-12 col-sm">
+                                    <select name="headcount" id="headcount" class="form-control">
+                                        <option selected>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="date" class="col-xs-12 col-sm col-form-label">Date</label>
+                                <div class="col-xs-12 col-sm">
+                                    <input type="date" name="date" id="date" placeholder="MM/DD/YYYY" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <button type="button" data-bs-dismiss="modal" class="btn button-secondary">Cancel</button>
+                                    <button type="submit" class="btn button-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	</main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <a href="https://instagram.com/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                    <a href="https://youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a>
+                </div>
+                <div class="col-sm-4 text-left">
+                    <i class="fa-solid fa-phone fa-md me-2"></i>1-206-555-1234<br />
+                    <i class="fa-solid fa-envelope fa-md me-2"></i> hello@codeandcoffee.com
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Plugins -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
 </html>

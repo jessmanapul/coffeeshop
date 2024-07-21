@@ -1,0 +1,58 @@
+$color-light: #eba988;
+$color-dark: #000000;
+
+nav {
+    background-color: $color-dark;
+    color: #ffffff;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+#hero {
+    background-color: $color-dark;
+    background-image: url("/img/coffee-shop.jpeg");
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    margin-bottom: 50px;
+    color: #fff;
+
+    h1 {
+        font-weight: 500;
+    }
+
+    h2 {
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+}
+
+.button-primary {
+    background-color: $color-light;
+    color: #000000;
+}
+
+.button-secondary {
+    background: none;
+    border: 2px solid $color-light;
+    color: $color-light;
+}
+
+footer {
+    background-color: $color-dark;
+    padding: 30px;
+    color: #fff;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    i {
+        color: $color-light;
+    }
+}
